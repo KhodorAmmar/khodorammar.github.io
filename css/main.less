@@ -1,0 +1,100 @@
+﻿/* = variables
+-------------------------------------------------------------- */
+@height: 'document.body.clientHeight';
+@fontColor: #333;
+@fontSize: 6px;
+@commentColor: #008000;
+@textColor: #000;
+@functionColor: #1157FF;
+@stringColor: #A31515;
+@hrefColor: #2B91BC;
+
+.rounded-corners (@radius: 2px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.transform(@X: 0px) {
+    -moz-transform: translateX(@X);
+    -ms-transform: translateX(@X);
+    -o-transform: translateX(@X);
+    -webkit-transform: translateX(@X);
+    transform: translateX(@X);
+}
+
+.transition(@time: 1s) {
+    -moz-transition: all @time ease-in-out;
+    -o-transition: all @time ease-in-out;
+    -webkit-transition: all @time ease-in-out;
+    transition: all @time ease-in-out;
+}
+
+body {
+    padding: 12px;
+    font: 14px Consolas;
+    line-height: 1.4em;
+    color: @fontColor;
+}
+
+.row {
+    width: 100%;
+    opacity: 0;
+    .transition();
+}
+
+    .row:before {
+        content: attr(data-content);
+        position: absolute;
+        left: 3%;
+        color: @hrefColor;
+    }
+
+    .row.active {
+        opacity: 1;
+    }
+
+
+.comment {
+    color: @commentColor;
+}
+
+.text {
+    color: @textColor;
+}
+
+.function {
+    color: @functionColor;
+}
+
+.string {
+    color: @stringColor;
+    text-decoration: none;
+
+    a {
+        color: @stringColor;
+        text-decoration: none;
+        padding: -1px 1px;
+        background-color: fade(@hrefColor,10%);
+        display: inline-block;
+        .rounded-corners(2px);
+        border-bottom: solid 1px #fff;
+
+        :hover, :focus {
+            color: @stringColor;
+            text-transform: none;
+        }
+    }
+}
+
+.indent {
+    width: 90%;
+    margin-left: 5%;
+
+    .indent {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
