@@ -8,6 +8,7 @@
 @functionColor: #1157FF;
 @stringColor: #A31515;
 @hrefColor: #2B91BC;
+@borderColor: #A5A5A5;
 
 .rounded-corners (@radius: 2px) {
     -webkit-border-radius: @radius;
@@ -44,19 +45,18 @@ body {
     width: 100%;
     opacity: 0;
     .transition();
-}
 
-    .row:before {
+    &:before {
         content: attr(data-content);
         position: absolute;
         left: 3%;
         color: @hrefColor;
     }
 
-    .row.active {
+    &.active {
         opacity: 1;
     }
-
+}
 
 .comment {
     color: @commentColor;
