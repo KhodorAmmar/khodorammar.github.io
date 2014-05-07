@@ -221,7 +221,13 @@
             </div>
         </div>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>
+	$(function () {
+			$(".row").each(function (i) {
+				$(this).attr("data-content", i + 1);
+			}).addClass("active");
+		})
+	</script>
 </body>
 </html>
