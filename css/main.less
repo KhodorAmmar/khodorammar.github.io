@@ -77,7 +77,7 @@ body {
     a {
         color: @stringColor;
         text-decoration: none;
-       margin-bottom:-1px;
+        margin-bottom: -1px;
         display: inline-block;
         .rounded-corners(2px);
         border-bottom: solid 1px fade(@hrefColor,10%);
@@ -88,10 +88,14 @@ body {
             display: inline-block;
             content: '';
             position: absolute;
-            bottom:0;
+            bottom: 0;
             background-color: fade(@hrefColor,10%);
             .transition(.2s);
             height: 0;
+
+            @media only screen and (max-device-width: 480px) {
+                height: 18px;
+            }
         }
 
         &:hover, &:focus {
@@ -119,4 +123,3 @@ body {
     width: 90%;
     margin-left: 7.5%;
 }
-
