@@ -77,15 +77,30 @@ body {
     a {
         color: @stringColor;
         text-decoration: none;
-        padding: -1px 1px;
-        background-color: fade(@hrefColor,10%);
+       margin-bottom:-1px;
         display: inline-block;
         .rounded-corners(2px);
-        border-bottom: solid 1px #fff;
+        border-bottom: solid 1px fade(@hrefColor,10%);
+        position: relative;
 
-        :hover, :focus {
+        &:before {
+            width: 100%;
+            display: inline-block;
+            content: '';
+            position: absolute;
+            bottom:0;
+            background-color: fade(@hrefColor,10%);
+            .transition(.2s);
+            height: 0;
+        }
+
+        &:hover, &:focus {
             color: @stringColor;
             text-transform: none;
+
+            &:before {
+                height: 18px;
+            }
         }
     }
 }
@@ -99,3 +114,9 @@ body {
         margin-left: 2.5%;
     }
 }
+
+.doubleindent {
+    width: 90%;
+    margin-left: 7.5%;
+}
+
