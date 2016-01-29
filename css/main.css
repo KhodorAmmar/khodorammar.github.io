@@ -19,6 +19,11 @@ body {
   left: 3%;
   color: #2b91bc;
 }
+@media (max-width: 767px) {
+  .row:before {
+    display: none;
+  }
+}
 .row.active {
   opacity: 1;
 }
@@ -80,4 +85,11 @@ body {
 .doubleindent {
   width: 90%;
   margin-left: 7.5%;
+}
+@media (max-width: 767px) {
+  .indent,
+  .doubleindent {
+    width: 100%;
+    margin: 0;
+  }
 }
