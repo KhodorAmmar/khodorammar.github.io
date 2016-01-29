@@ -11,24 +11,16 @@
 @borderColor: #A5A5A5;
 
 .rounded-corners (@radius: 2px) {
-    -webkit-border-radius: @radius;
-    -moz-border-radius: @radius;
-    -ms-border-radius: @radius;
-    -o-border-radius: @radius;
     border-radius: @radius;
 }
 
 .transform(@X: 0px) {
     -moz-transform: translateX(@X);
-    -ms-transform: translateX(@X);
-    -o-transform: translateX(@X);
     -webkit-transform: translateX(@X);
     transform: translateX(@X);
 }
 
 .transition(@time: 1s) {
-    -moz-transition: all @time ease-in-out;
-    -o-transition: all @time ease-in-out;
     -webkit-transition: all @time ease-in-out;
     transition: all @time ease-in-out;
 }
