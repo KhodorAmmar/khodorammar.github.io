@@ -87,8 +87,16 @@ body {
   margin-left: 7.5%;
 }
 @media (max-width: 767px) {
+  body {
+    padding: 12px 20px;
+  }
   .indent,
   .doubleindent {
+    width: 100%;
+    margin: 0;
+  }
+  .indent .indent,
+  .doubleindent .indent {
     width: 100%;
     margin: 0;
   }
