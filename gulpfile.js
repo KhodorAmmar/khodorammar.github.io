@@ -5,7 +5,6 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const browserSync = require('browser-sync').create();
 const path = require("path");
-const rename = require('gulp-rename');
 const access = require('gulp-accessibility');
 const w3cjs = require('gulp-w3cjs');
 
