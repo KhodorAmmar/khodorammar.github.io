@@ -1,0 +1,16 @@
+@media print {
+    a[data-print]::after {
+        content: " (" attr(data-print) ")";
+    }
+
+    .page-break {
+        page-break-after: always;
+    }
+
+
+    footer {
+        ul li {
+            display: block;
+        }
+    }
+}

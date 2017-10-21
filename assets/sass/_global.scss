@@ -2,6 +2,9 @@
     width: 60rem;
     padding: 0 6vw;
     margin: 0 auto;
+    @media screen and (min-width: 100rem) {
+        width: 66vw;
+    }
     @media screen and (max-width: 60rem) {
         width: 50rem;
     }
@@ -12,7 +15,10 @@
 
 header {
     height: 80vw;
-    max-height: 70vh;
+    max-height: 520px;
+    @media screen and (min-width: 100rem) {
+        max-height: 70vh;
+    }
     min-height: 400px;
     background-color: #20C1F1;
     background: linear-gradient(270deg, #f668d5, #20c1f1);
@@ -42,7 +48,6 @@ header {
 
 footer {
     margin-bottom: 2rem;
-    a {}
 }
 
 section {
