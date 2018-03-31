@@ -19,31 +19,15 @@ header {
     @media screen and (min-width: 100rem) {
         max-height: 70vh;
     }
-    min-height: 400px;
-    background-color: #3023ae;
-    background: linear-gradient(170deg, #c024b6, #3023ae);
-    background-size: 400% 400%;
-    animation: gradient 30s ease infinite;
+    min-height: 460px;
+    background-color: #aa076b;
+    background: linear-gradient(170deg, #aa076b, #61045f);
+    background-attachment: fixed;
     color: #fff;
     position: relative;
-    .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
@@ -51,7 +35,7 @@ footer {
 }
 
 section {
-    margin: calc(20px + 5vw) 0;
+    margin: 72px 0;
 }
 
 .block + .block {
@@ -67,4 +51,19 @@ section {
     margin: -1px;
     padding: 0;
     border: 0;
+}
+
+h2 {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to right, #aa076b 0%, #61045f 100%);
+        height: 0.5em;
+        width: 2.5em;
+        left: -0.4em;
+        top: 0.5em;
+        margin-top: -0.09em;
+        transform: translateX(-100%);
+    }
 }

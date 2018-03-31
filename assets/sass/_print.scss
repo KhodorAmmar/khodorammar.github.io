@@ -1,4 +1,7 @@
 @media print {
+    body{
+        margin: 24px 0;
+    }
     a[data-print]::after {
         content: " (" attr(data-print) ")";
     }
@@ -7,10 +10,16 @@
         page-break-after: always;
     }
 
-
     footer {
         ul li {
             display: block;
         }
+    }
+
+    header {
+        height: auto;
+        min-height: 100%;
+        background: none;
+        color: #333;
     }
 }
