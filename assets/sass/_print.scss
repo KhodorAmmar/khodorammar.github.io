@@ -1,6 +1,6 @@
 @media print {
-    body{
-        margin: 24px 0;
+    body {
+        margin-bottom: 24px;
     }
     a[data-print]::after {
         content: " (" attr(data-print) ")";
@@ -15,11 +15,10 @@
             display: block;
         }
     }
-
     header {
-        height: auto;
-        min-height: 100%;
-        background: none;
-        color: #333;
+        background: #aa076b;
+    }
+    .download {
+        display: none;
     }
 }
