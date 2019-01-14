@@ -1,24 +1,24 @@
 @media print {
-    body {
-        margin-bottom: 24px;
-    }
-    a[data-print]::after {
-        content: " (" attr(data-print) ")";
-    }
+  body {
+    margin-bottom: 24px;
+  }
+  a[data-print]::after {
+    content: " (" attr(data-print) ")";
+  }
 
-    .page-break {
-        page-break-after: always;
-    }
+  .page-break {
+    page-break-after: always;
+  }
 
-    footer {
-        ul li {
-            display: block;
-        }
+  footer {
+    ul li {
+      display: block;
     }
-    header {
-        background: #aa076b;
-    }
-    .download {
-        display: none;
-    }
+  }
+  header {
+    background: #aa076b;
+  }
+  .download {
+    display: none;
+  }
 }
