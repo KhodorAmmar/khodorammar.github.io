@@ -4,7 +4,6 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const browserSync = require("browser-sync").create();
-const path = require("path");
 const access = require("gulp-accessibility");
 const w3cjs = require("gulp-w3cjs");
 
@@ -32,9 +31,7 @@ const postcssDev = function () {
 const postcssProd = function () {
   var processors = [
     autoprefixer(),
-    cssnano({
-      safe: true,
-    }),
+    cssnano(),
   ];
 
   return gulp
