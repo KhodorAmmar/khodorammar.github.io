@@ -8,19 +8,15 @@ const path = require("path");
 const access = require("gulp-accessibility");
 const w3cjs = require("gulp-w3cjs");
 
-const sassTask = function() {
+const sassTask = function () {
   return gulp
     .src(["assets/sass/style.scss"])
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("assets/sass/"));
 };
 
-const postcssDev = function() {
-  var processors = [
-    autoprefixer({
-      browsers: ["last 2 versions"]
-    })
-  ];
+const postcssDev = function () {
+  var processors = [autoprefixer()];
 
   return gulp
     .src("assets/css/*.css")
@@ -28,19 +24,17 @@ const postcssDev = function() {
     .pipe(gulp.dest("assets/css/"))
     .pipe(
       browserSync.stream({
-        match: "**/*.css"
+        match: "**/*.css",
       })
     );
 };
 
-const postcssProd = function() {
+const postcssProd = function () {
   var processors = [
-    autoprefixer({
-      browsers: ["last 2 versions"]
-    }),
+    autoprefixer(),
     cssnano({
-      safe: true
-    })
+      safe: true,
+    }),
   ];
 
   return gulp
@@ -49,32 +43,32 @@ const postcssProd = function() {
     .pipe(gulp.dest("assets/sass/"));
 };
 
-const watch = function() {
-  return gulp.watch(["assets/sass/**/*.scss"], gulp.series(sass, postcssDev));
+const watch = function () {
+  return gulp.watch(
+    ["assets/sass/**/*.scss"],
+    gulp.series(sassTask, postcssDev)
+  );
 };
 
-const browserSyncTask = function(done) {
+const browserSyncTask = function (done) {
   browserSync.init({
     server: {
-      baseDir: "./"
-    }
+      baseDir: "./",
+    },
   });
   done();
 };
 
-const w3cjsTask = function() {
-  return gulp
-    .src("index.html")
-    .pipe(w3cjs())
-    .pipe(w3cjs.reporter());
+const w3cjsTask = function () {
+  return gulp.src("index.html").pipe(w3cjs()).pipe(w3cjs.reporter());
 };
 
-const a11yTask = function() {
+const a11yTask = function () {
   return gulp
     .src("index.html")
     .pipe(
       access({
-        force: true
+        force: true,
       })
     )
     .on("error", console.log);

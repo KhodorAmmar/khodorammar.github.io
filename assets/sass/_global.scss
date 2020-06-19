@@ -1,3 +1,44 @@
+@import "../../node_modules/normalize.css/normalize.css";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  position: relative;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+@media screen {
+  a[target="_blank"] {
+    display: inline-block;
+    padding-right: 1em;
+    &::after {
+      content: "↗";
+      position: absolute;
+      bottom: -2px;
+      right: 0;
+    }
+  }
+}
+
+:root {
+  --hue: 323;
+  --main: hsl(var(--hue), 92%, 35%);
+  --grad: hsl(var(--hue), 92%, 20%);
+  --text: hsl(0, 0%, 20%);
+  --text-light: hsl(0, 0%, 35%);
+}
+
 .container {
   width: 60rem;
   padding: 0 6vw;
@@ -20,8 +61,8 @@ header {
     max-height: 70vh;
   }
   min-height: 460px;
-  background-color: #aa076b;
-  background: linear-gradient(170deg, #aa076b, #61045f);
+  background-color: var(--main);
+  background: linear-gradient(170deg, var(--main), var(--grad));
   background-attachment: fixed;
   color: #fff;
   position: relative;
@@ -58,7 +99,7 @@ h2 {
   &:before {
     content: "";
     position: absolute;
-    background: linear-gradient(to right, #aa076b 0%, #61045f 100%);
+    background: linear-gradient(to right, var(--main), var(--grad));
     height: 0.5em;
     width: 2.5em;
     left: -0.4em;
