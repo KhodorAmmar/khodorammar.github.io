@@ -9,6 +9,9 @@
   .page-break {
     page-break-after: always;
   }
+  section {
+    margin: 48px 0;
+  }
 
   footer {
     ul li {
@@ -17,8 +20,19 @@
   }
   header {
     background: #aa076b;
-    height: 400px;
+    height: 300px;
     min-height: 0;
+  }
+  .block + .block{
+    margin-top: 1em;
+  }
+  h3, h4{
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  p{
+    font-size: 18px;
   }
   .download {
     display: none;
