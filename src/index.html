@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="google-site-verification" content="TzsqWHb_6ZMF5OPXp_AImtjTsMh4fnO9EaLSiWJToe4" />
   <title>Khodor Ammar | Resume</title>
+  <meta name="theme-color" content="hsl(323,92%,35%)" />
   <meta name="description" content="Khodor Ammar | Engineering Manager at Klarna" />
   <meta property="og:title" content="Khodor Ammar | Resume" />
   <meta property="og:description" content="Khodor Ammar | Engineering Manager at Klarna" />
@@ -214,7 +215,9 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.body.onscroll = () => {
-        document.documentElement.style.setProperty('--hue', 323 - window.scrollY / 10);
+        const hue = 323 - window.scrollY / 10;
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', `hsl(${hue},92%,35%)`)
+        document.documentElement.style.setProperty('--hue', hue);
       }
     });
   </script>
