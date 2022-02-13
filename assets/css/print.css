@@ -13,28 +13,28 @@
     margin: 48px 0;
   }
 
-  footer {
-    ul li {
-      display: block;
-    }
+  footer ul li {
+    display: block;
   }
   header {
     background: #aa076b;
     height: 300px;
     min-height: 0;
   }
-  .block + .block{
+  .block + .block {
     margin-top: 1em;
   }
-  h3, h4{
+  h3,
+  h4 {
     font-size: 20px;
     margin-bottom: 12px;
     line-height: 1.2;
   }
-  p{
+  p {
     font-size: 18px;
   }
-  .download {
+  .download,
+  .header-links {
     display: none;
   }
 }

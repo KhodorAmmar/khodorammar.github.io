@@ -22,12 +22,13 @@ a:hover {
   a[target="_blank"] {
     display: inline-block;
     padding-right: 1em;
-    &::after {
-      content: "↗";
-      position: absolute;
-      bottom: -2px;
-      right: 0;
-    }
+  }
+
+  a[target="_blank"]::after {
+    content: "↗";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
   }
 }
 
@@ -43,23 +44,35 @@ a:hover {
   width: 60rem;
   padding: 0 6vw;
   margin: 0 auto;
-  @media screen and (min-width: 100rem) {
+}
+
+.container.intro {
+  padding: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+@media screen and (min-width: 100rem) {
+  .container {
     width: 66vw;
   }
-  @media screen and (max-width: 60rem) {
+}
+@media screen and (max-width: 60rem) {
+  .container {
     width: 50rem;
   }
-  @media screen and (max-width: 50rem) {
+}
+@media screen and (max-width: 50rem) {
+  .container {
     width: 100%;
   }
 }
 
 header {
-  height: 80vw;
-  max-height: 520px;
-  @media screen and (min-width: 100rem) {
-    max-height: 70vh;
-  }
+  height: 86vw;
+  max-height: 580px;
   min-height: 460px;
   background-color: var(--main);
   background: linear-gradient(170deg, var(--main), var(--grad));
@@ -69,6 +82,23 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 100rem) {
+  header {
+    max-height: 70vh;
+  }
+}
+
+.header-links {
+  margin-top: auto;
+}
+
+.header-links a,
+.header-links a:hover,
+.header-links a:visited,
+.header-links a:active {
+  color: white;
 }
 
 footer {
@@ -96,15 +126,18 @@ section {
 
 h2 {
   position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    background: linear-gradient(to right, var(--main), var(--grad));
-    height: 0.5em;
-    width: 2.5em;
-    left: -0.4em;
-    top: 0.5em;
-    margin-top: -0.09em;
-    transform: translateX(-100%);
-  }
 }
+
+h2:before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, var(--main), var(--grad));
+  height: 0.5em;
+  width: 2.5em;
+  left: -0.4em;
+  top: 0.5em;
+  margin-top: -0.09em;
+  transform: translateX(-100%);
+}
+
+
