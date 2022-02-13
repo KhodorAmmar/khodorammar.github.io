@@ -9,7 +9,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel",
-    "build": "rm -rd dist && parcel build"
+    "build": "rm -rd docs && parcel build --dist-dir docs"
   },
   "author": "Khodor Ammar",
   "license": "ISC",
