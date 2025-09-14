@@ -71,9 +71,6 @@ a:hover {
 }
 
 header {
-  height: 86vw;
-  max-height: 580px;
-  min-height: 460px;
   background-color: var(--main);
   background: linear-gradient(170deg, var(--main), var(--grad));
   background-attachment: fixed;
@@ -140,4 +137,30 @@ h2:before {
   transform: translateX(-100%);
 }
 
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+}
 
+.skills li {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 1.6;
+}
+
+.skills li span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+}
+
+@media screen and (max-width: 60rem) {
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}

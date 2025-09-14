@@ -3,14 +3,10 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: calc(1rem + 0.5vw);
   color: var(--text);
-}
-
-.skills span {
-  font-family: Courier, monospace;
 }
 
 h1,
@@ -54,19 +50,14 @@ span.time {
   color: var(--text-light);
 }
 
-ul {
+ul.links {
   margin: 0;
   padding: 0;
 }
 
-ul li {
+ul.links li {
   margin: 0;
   padding: 0;
-  list-style-type: none;
   display: inline-block;
-  margin-right: 0.5rem;
-}
-
-ul li:last-of-type {
-  margin-right: 0;
+  margin-right: 1rem;
 }

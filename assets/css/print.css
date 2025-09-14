@@ -1,27 +1,30 @@
 @media print {
+  :root {
+    --main: #aa076b;
+  }
   body {
     margin-bottom: 24px;
   }
   a[data-print]::after {
-    content: " (" attr(data-print) ")";
+    content: ": " attr(data-print) "";
   }
-
   .page-break {
     page-break-after: always;
   }
   section {
     margin: 48px 0;
   }
-
-  footer ul li {
+  ul.links li {
     display: block;
   }
   header {
-    background: #aa076b;
-    height: 300px;
+    background: var(--main);
     min-height: 0;
   }
-  .block + .block {
+  h2:before {
+    background: var(--main);
+  }
+  .block {
     margin-top: 1em;
   }
   h3,
@@ -33,8 +36,8 @@
   p {
     font-size: 18px;
   }
-  .download,
-  .header-links {
+  ul.links .download,
+  footer ul.links {
     display: none;
   }
 }

@@ -1,15 +1,16 @@
 {
   "name": "khodor-ammar-resume",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "devDependencies": {
     "normalize.css": "^8.0.1",
-    "parcel": "^2.3.1"
+    "vite": "^7.1.5"
   },
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel --dist-dir docs",
-    "build": "rm -rd docs && parcel build --dist-dir docs --no-source-maps"
+    "dev": "vite",
+    "build": "vite build --outDir docs",
+    "preview": "vite preview"
   },
   "author": "Khodor Ammar",
   "license": "ISC",
