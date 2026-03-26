@@ -44,8 +44,8 @@ a:hover {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main: hsl(var(--hue), 80%, 50%);
-    --grad: hsl(var(--hue), 80%, 30%);
+    --main: hsl(var(--hue), 60%, 45%);
+    --grad: hsl(var(--hue), 60%, 28%);
     --text: hsl(0, 0%, 88%);
     --text-light: hsl(0, 0%, 70%);
     --bg: hsl(0, 0%, 12%);
