@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "devDependencies": {
     "normalize.css": "^8.0.1",
-    "vite": "^7.1.5"
+    "vite": "^8.0.2"
   },
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
